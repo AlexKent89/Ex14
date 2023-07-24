@@ -4,6 +4,7 @@ def welcome():
     print("Welcome to Rock-Python-Scissors!")
 #Ask user to enter their choice
     print("Enter your choice: 'rock', 'python', or'scissors'")
+    print("I accept banana's but they can't be played in this game")
 #define computer choice using random
 def get_computer_choice(states):
     return random.choice(states)
@@ -47,7 +48,8 @@ def display_final_results(results):
     print(f"User Wins! {results['user_wins']}")
     print(f"Computer Wins! {results['computer_wins']}")
     print(f"It's a draw {results['draws']}")
-#difine goodbye
+#define goodbye
+def goodbye():
     print("Thank you for playing ROCK-PYTHON-SCISSORS\n I'll be back!")
 #define main
 def main():
@@ -64,10 +66,8 @@ def main():
         winner = check_wins(results)
         if winner:
             display_winner(winner,results)
-            break
-
-            display_final_results(results)
             goodbye()
+            break
 #If statement to run the main program if the name is main
 if __name__=="__main__":
     main()
