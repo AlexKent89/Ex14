@@ -15,7 +15,7 @@ def get_user_choice(states):
     while user_choice not in states:
         print("Invalid input, please enter: 'rock', 'python', or 'scissors'")
         user_choice = input().lower()
-        return user_choice
+    return user_choice
 #define the winner
 def get_winner(user_choice, computer_choice, states, results):
     if user_choice == computer_choice:
@@ -65,9 +65,11 @@ def main():
         get_winner(user_choice, computer_choice, states, results)
         winner = check_wins(results)
         if winner:
-            display_winner(winner,results)
+            display_winner(winner, results)
+            display_final_results(results)
             goodbye()
             break
+
 #If statement to run the main program if the name is main
 if __name__=="__main__":
     main()
