@@ -1,3 +1,4 @@
+import getpass
 import random
 #define welcome
 def welcome():
